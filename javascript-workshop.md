@@ -77,9 +77,44 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
 ### บันทึกผลการทดลอง 
 ```html
 [บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ทดลอง JavaScript</title>
+</head>
+<body>
+    <button onclick="alert('อิทธิพัทธิ์ สุทธินวล')">ปุ่มที่ 1</button>
+
+    <button id="btn2">ปุ่มที่ 2</button>
+
+    <button id="btn3">ปุ่มที่ 3</button>
+ 
+    <p id="output"></p>
+
+    <script>
+        document.getElementById('btn2').onclick = function() {
+            let today = new Date();
+            alert('วันที่ปัจจุบัน: ' + today.toLocaleDateString('th-TH'));
+        };
+
+        document.getElementById('btn3').onclick = function() {
+            let currentTime = new Date();
+            alert('เวลาปัจจุบัน: ' + currentTime.toLocaleTimeString());
+        };
+
+        function showText() {
+            let text = document.getElementById('textBox').value;
+            document.getElementById('output').innerText = text;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
 ```
 [รูปผลการทดลองที่ 1]
-  
+ ![G01](https://github.com/user-attachments/assets/9291cb4c-3b7c-4845-b27a-d31bf1a9d468)
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
 
